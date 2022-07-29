@@ -2,7 +2,7 @@
   export let message;
   export let sender;
 
-  const messageClass = message.who === sender ? 'sent' : 'received';
+  const messageClass = message.who === sender ? "sent" : "received";
 
   const avatar = `https://avatars.dicebear.com/api/initials/${message.who}.svg`;
 
@@ -15,5 +15,6 @@
     <p>{message.what}</p>
 
     <time>{ts.toLocaleTimeString()}</time>
+    <time>{JSON.stringify(message)}</time>
   </div>
 </div>
